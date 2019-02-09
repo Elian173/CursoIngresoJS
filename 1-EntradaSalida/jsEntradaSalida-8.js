@@ -16,5 +16,5 @@ function SacarResto()
     componentes=(parseInt(nDividendo)%parseInt(nDivisor));
     
 
-    alert (componentes);
+    alert ("El resto es "+componentes);
 }
