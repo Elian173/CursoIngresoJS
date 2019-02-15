@@ -19,9 +19,9 @@ resta= parseInt (nroUno)-parseInt (nroDos);
 
 if (nroUno==nroDos) {alert (nroUno + nroDos)}
 
-       if (nroUno>nroDos) {alert (resta)}
+       if (parseInt (nroUno)>parseInt (nroDos)) {alert (resta)}
     
-        if (nroUno<nroDos&&suma<=10) {alert (suma) }
+        if (parseInt (nroUno)<parseInt (nroDos)&&suma<=10) {alert (suma) }
 
-            if (nroUno<nroDos&&suma>10) {alert ("la suma es mayor a 10 , y da "+suma)};
+            if (parseInt (nroUno)<parseInt (nroDos)&&suma>10) {alert ("la suma es mayor a 10 , y da "+suma)};
         }
