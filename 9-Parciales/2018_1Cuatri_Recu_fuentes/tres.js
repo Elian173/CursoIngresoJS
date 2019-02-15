@@ -7,26 +7,22 @@ var pagaCadaUno
 var total
 var iva
 
-parseInt (precio);
+precio=prompt ("Cuanto hay que pagar");
+amigos=prompt("Cuantos amigos son ");
+propina=precio*(0.1);
+iva=(precio)*(0.21);
+
 parseInt (amigos);
-parseInt (propina);
-parseInt (pagaCadaUno);
-parseInt (total);
 parseInt(iva);
 
-precio=1000;
-amigos=5;
+total =parseInt (precio)+parseInt(propina);
 
-
-propina=precio*(0.1);
-total = precio + propina;
-iva=precio*(0.21)
-
-pagaCadaUno= (total/amigos);
+pagaCadaUno= ((total+iva)/amigos);
+parseInt(pagaCadaUno);
 
 
 alert ("El precio es "+precio+" la propina es $"+propina+" en total seria $"+
-total +"(sin contar el iva de $"+iva+") , y cada uno de los amigos deveria pagar $"+
+total +"(sin contar el iva de $"+iva+") , y cada uno de los amigos deberia pagar $"+
 pagaCadaUno);
 
 }
