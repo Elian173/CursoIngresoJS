@@ -10,30 +10,68 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-     var descuento = 0
-     var lamparas
-     var precioFin
-     var precioSinDes
+
+     var cantidadA
+
+     cantidadA = document.getElementById("Cantidad").value;
+
+     var cantidad
+     var descuento
+     var aDescontar
+     var precioBr
+     var precioFinal
+     var marca
+     var impuesto
 
 
-lamparas=document.getElementById("Cantidad").value;
-precioSinDes=(lamparas*35);
+     marca=document.getElementById("Marca").value;
+     cantidad=parseInt(cantidadA);
+     precioBr=(cantidad)*35;
+     descuento=0
 
 
-parseInt(lamparas);
-parseInt (descuento);
-parseInt(precioSinDes);
-parseInt(precioFin);
+     if (cantidad<6)      {descuento=+0};
+
+     if (cantidad>=6)     {descuento=+50};
+
+     if(cantidad==5){
+                      if      (marca=="ArgentinaLuz")     {descuento=+40} 
+                      else    {descuento=+30} 
+                    };    
+
+     if(cantidad==4){
+                     if       (marca=="ArgentinaLuz"||marca=="FelipeLamparas")    {descuento=+25}
+                     else     {descuento=+20}    
+                    };
+
+     if(cantidad==3){
+                     if  (marca=="ArgentinaLuz")       {descuento=+15}
+                          else{
+                                if       (marca=="FelipeLamparas")     {descuento=+10} 
+                                    else     {descuento=+5}      
+                              }   
+                    } ;
+     
 
 
+     impuesto= (precioBr*10)/100;
 
+     aDescontar= (precioBr*descuento)/100;
 
-if(lamparas=6){
-                    (parseInt(descuento)+0.10)    }
+     precioFinal=(precioBr)-(aDescontar);
+     
+     
+     if (precioFinal>=120) {
+                              document.getElementById("precioDescuento").value=precioFinal+impuesto
+                           }
+     
+     if (precioFinal>=120) {
 
+     alert("IIBB Usted pago $"+(precioFinal+impuesto)+", siendo $"+(impuesto)+" el impuesto que se pagó")
+                         
+                           }
 
-precioFin=(precioSinDes-(precioSinDes*descuento));
+     else {document.getElementById("precioDescuento").value="$"+precioFinal};
 
-alert (precioFin);
 
 }
