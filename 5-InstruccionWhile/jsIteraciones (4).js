@@ -1,18 +1,37 @@
 function mostrar()
 {
 
-	var numero = prompt ("ingrese un numero entre 0 y 9")
+	var numero = prompt ("ingrese un numero entre 0 y 9");
+	var contador=0
 
-while (numero)
+	if (0<numero&&numero<=9) {document.getElementById("Numero").value=numero}
+	
+	else 
+
+	{
+			while (0>numero||numero>9 && contador<2) // 2 porque ya hay un prompt en la variable
 			   {
-					  
-					if (0>numero||numero>9) {
-												numero = prompt ("ingrese un numero entre 0 y 9") }
+					numero = prompt ("Ingrese un numero entre 0 y 9")
 
-					else 					{ break; }
+						if (0>numero||numero>9) {
+													(contador ++)	
+												} 
+
+						if (0<numero&&numero<=9) {
+													document.getElementById("Numero").value=numero	
+												 }	
+
+						if (contador>=2) { 	
+											alert("Se alcanzo el numero maximo de intentos erroneos") 
+										 }
+						
+				}
+	};
 
 
-					document.getElementById("Numero").value= numero ;
-}
-}
+
+
+
+
+};
 //FIN DE LA FUNCIÓN

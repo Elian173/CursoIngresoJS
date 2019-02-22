@@ -1,6 +1,6 @@
 function mostrar()
 {
-	alert('iteración while');
+	//	alert('iteración while');
 
 	var numero
 	numero = 10
