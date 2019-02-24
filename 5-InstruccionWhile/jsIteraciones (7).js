@@ -1,32 +1,35 @@
 function mostrar()
-{
-  var num
-  var suma=0;
-  var PreguntaUno
-  var PreguntaDos
-  var contador = 0 ;
-  PreguntaUno=confirm("Ingresar un numero")
 
-if (PreguntaUno==true){
-                  PreguntaDos=true;
-
-while (PreguntaDos==true)
 {
-  (contador ++)
-  num = prompt("ingrese un numero");
-  num=parseInt(num);
-  while(isNaN(num)) {
-                       num = prompt("ingrese un numero")
-                       num=parseInt(num)
-                       //suma = (suma + num)
-                       };
-  suma= (suma + num);
-  PreguntaDos=confirm("sumar otro numero?")}
+
+  var bandera 
+   var suma 
+    var contador
+     var num
+
+  contador=0;
+  bandera==true ;
+  num=0;
+  suma=0;
+
+
+ while (confirm("Sumar un numero?")==true)
+    {
+      (contador ++) ;
+
+      num=prompt ("Sumar este numero");
+
+      num=parseInt(num);
+          while (isNaN(num)) {
+                              num = prompt("ese no era un numero , pls pone un numero ")
+                              num=parseInt(num)}
+      (suma+=num)
+    };
+
+document.getElementById("suma").value=suma
+document.getElementById("promedio").value=suma/contador
 }
 
-document.getElementById("suma").value=suma;
 
-document.getElementById("promedio").value=suma/contador;
-}
 
 //FIN DE LA FUNCIÓN

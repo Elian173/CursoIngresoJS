@@ -9,14 +9,15 @@ while( contador < 5)
 {
   (contador ++);
   num = prompt("ingrese un numero");
-
   num=parseInt(num);
+
   while(isNaN(num)) {
-                       num = prompt("ingrese un numero")
+                       num = prompt("ingrese un numero real")
                        num=parseInt(num)
                        }
 
-  suma=(suma + num);}
+  //suma=(suma + num);}
+  (suma+=num)};
 
 
 document.getElementById('suma').value=suma;

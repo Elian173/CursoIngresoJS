@@ -1,36 +1,42 @@
 function mostrar()
 {
-  // declarar variables
-  var num
-  var max
-  var min
-  var bandera
+  var num;
+  var max;
+  var min;
+  var bandera;
 
-  bandera==true;
+  bandera=true;
 
-  while(confirm("Continuar?"))
-	{
-    num=prompt("ingrese un numero");
+  while (confirm("ingresar numero")==true)
+  {
 
-    num=parseInt(num);
+    num = prompt("Ingrese su numerito jeje");
 
-    if (bandera == true) {
+    num=parseInt(num)
+                      while (isNaN(num)) {
+                        num=prompt("ese no era un numero , ingrese un numero pls")
+                        num=parseInt(num)
+                      };
+  if (bandera) 
+  {
+    (bandera=false);
+    (max=num);
+    (min=num);
 
-    bandera=false
-    max=num
-    min=num
+  } else {
 
-    } else {
-            if (num>max ) { max==num } else {
-            if (num<min)  { min==num } }
-           }
+    if (num>max)  { (max=num) }
+
+    else {
+
+    if (num<min) { (min=num) }
+
+    else {(max=max);(min=min)}
   }
+  }
+}
+document.getElementById("maximo").value=max;
+document.getElementById("minimo").value=min;
+}
 
- alert(max);
- // document.getElementById("maximo").value=max;
- // document.getElementById("minimo").value=min;
-
-
-SIN TERMINAR ////// HACER EL 12 DE LOS TP
-
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN

@@ -1,48 +1,52 @@
 function mostrar()
 {
+var num=0;
+var suma=0;
+var multiplicacion=1;
 
-	//var positivo=0;
-  //var negativo=1;
-  var num
-  var numN =1
-  var numP =0
-  var suma=0;
-  var multiplicacion=0
-  var PreguntaUno
-  var PreguntaDos
-  var contador = 0 ;
-
-
-
-PreguntaUno=confirm("Ingresar un numero")
-
-if (PreguntaUno==true){
-                        PreguntaDos=true;
-
-while (PreguntaDos==true)
+while (confirm ("Agregar un numero?"))
 {
-  (contador ++)
-  num = prompt("ingrese un numero");
-  num=parseInt(num);
-  while(isNaN(num)) {
-                       num = prompt("ingrese un numero")
-                       num=parseInt(num)
-                    };
 
-        if (num>0)  {num=numP ,
+    num=prompt("ingrese un numero")
+    num=parseInt(num)
 
-        suma=numP+numP };
+        while (isNaN(num)){
+                            num=prompt("ese no era un numero , ingrese un numero")
+                            num=parseInt(num)
+                          } ;  
+    if (num>=0)
+    {
+      (suma+=num)
+    }              
+    else
+    {
+    if(num<0)
+    {
+      (multiplicacion*=num)
+    }
+    }           
 
-        if (num<0){num=numN ,
-          multiplicacion = (numN*numN)};
+};
 
-
-
-
-
-        PreguntaDos=confirm("agregar otro numero?");}}
 document.getElementById("suma").value=suma;
+document.getElementById("producto").value=multiplicacion;
 
-document.getElementById("producto").value=multiplicacion
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //FIN DE LA FUNCIÓN
