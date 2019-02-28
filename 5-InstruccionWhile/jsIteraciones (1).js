@@ -1,17 +1,23 @@
 function mostrar()
 {
-	alert('iteración while');
+var bandera;
+
+bandera= true
+algo = 1 
+
+while (algo=1){
+
+	alert ("empieza");
+
+						if (bandera) {alert("esta es la primera vez");
+						break; }
 
 
-	var numero
-	numero = 1
+   alert ("termina ");
 
-	while(numero<=10){
-		console.log (numero++)
-	
-	};
+};
+
+}
 
 
-
-
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN

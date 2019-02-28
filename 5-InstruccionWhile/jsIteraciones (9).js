@@ -4,10 +4,10 @@ function mostrar()
   var max;
   var min;
   var bandera;
-
+  var rta=true
   bandera=true;
 
-  while (confirm("ingresar numero")==true)
+  while (rta) //(confirm("ingresar numero")==true)
   {
 
     num = prompt("Ingrese su numerito jeje");
@@ -32,6 +32,8 @@ function mostrar()
     if (num<min) { (min=num) }
 
     else {(max=max);(min=min)}
+
+    rta=confirm("desea continuar?")
   }
   }
 }
