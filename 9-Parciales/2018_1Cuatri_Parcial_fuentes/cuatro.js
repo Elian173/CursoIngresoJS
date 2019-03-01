@@ -1,27 +1,43 @@
 function mostrar()
 {
-var nroUno
-var nroDos
-var suma
-var resta
+    var numUno;
+    var numDos;
+    var numUnoPars;
+    var numDosPars;
+    var resta;
+    var suma;
 
-nroUno=prompt("Ingrese el primer numero");
-nroDos=prompt("Ingrese el segundo numero");
+numUno=prompt("Ingrese el primer numero");
+parseInt(numUno)
+                while(isNaN(numUno))
+                {
+                    numUno=prompt("Ingrese el primer numero!");
+                    parseInt(numUno);
+                };
+numDos=prompt("Ingrese el segundo numero");
+parseInt(numDos)
+                while(isNaN(numDos))
+                {
+                    numDos=prompt("Ingrese el segundo numero!");
+                    parseInt(numDos);
+                };
 
-parseInt (suma);
-parseInt (resta);
-parseInt (nroUno);
-parseInt (nroDos);
+numUnoPars=parseInt(numUno);
+numDosPars=parseInt(numDos);
 
-suma= parseInt (nroUno)+parseInt (nroDos);
-resta= parseInt (nroUno)-parseInt (nroDos);
+suma=numUnoPars + numDosPars;
+resta=numUnoPars - numDosPars;
 
-
-if (nroUno==nroDos) {alert (nroUno + nroDos)}
-
-       if (parseInt (nroUno)>parseInt (nroDos)) {alert (resta)}
-    
-        if (parseInt (nroUno)<parseInt (nroDos)&&suma<=10) {alert (suma) }
-
-            if (parseInt (nroUno)<parseInt (nroDos)&&suma>10) {alert ("la suma es mayor a 10 , y da "+suma)};
+if ( numUno==numDos ) { alert(numUno+numDos) }
+ else { 
+    if (numUno>numDos) { alert (resta) }
+     else {
+        if (numUno<numDos&&suma>10) { alert("La suma es "+suma+" y es mayor a 10") }
+         else {
+            if(numUno<numDos) { alert (suma) }
         }
+    }
+};
+
+
+}

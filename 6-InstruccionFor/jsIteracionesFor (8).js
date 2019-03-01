@@ -1,17 +1,20 @@
 function mostrar()
 {
     var numero
-    var cont=0
+    var contador
+
 numero=prompt("numero");
 
-for (var i=2;i<=numero/2;i++)
-
+for (var i=1;i<=numero;i++){
+    contador=0
     if (numero%i==0) {
-        cont++;
+        (contador ++);
         break
     } 
-
 }
+if (contador>=2) { alert("no es primo")}
 
-if (cont>=2) { alert("no es primo ")}
+
+
 //FIN DE LA FUNCIÓN
+
