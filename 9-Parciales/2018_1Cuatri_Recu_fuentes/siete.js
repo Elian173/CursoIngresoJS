@@ -12,31 +12,35 @@ function mostrar()
 while (contador<5) {
 
     contador ++ ; 
-///////////
+//Pido velocidad//
     velocidad = prompt ("Ingrese la velocidad del vehiculo (entre 0 y 250)") ;
-    velocidad=parseInt(velocidad)  ;
-                    while(isNaN(velocidad)||velocidad>250||velocidad<0) {
-                                        velocidad=prompt("error , ingrese la velocidad del vehiculo")
-                                        velocidad=parseInt(velocidad)
-                                       };
-////////////
+    velocidad=parseInt(velocidad) ;
+
+    while(isNaN(velocidad)||velocidad>250||velocidad<0) {
+        velocidad=prompt("error , ingrese la velocidad del vehiculo (entre 0 y 250)")
+        velocidad=parseInt(velocidad)
+    };
+//pido tipo de combustible//
     combustible= prompt(" Ingrese el tipo de combustible (l) para Liquido o (s) para Solido");
 
                     while(combustible!="l"&&combustible!="s"){
                         combustible= prompt(" error , ingrese el tipo de combustible (s) o (l)")
                                                };
-////////////
+//velocidad mas alta con combustible solido//
 
-if (velocidad>velocidadMasAlta&&combustible=="s")
-{
-     velocidadMasAlta=velocidad
-};
+    if (velocidad > velocidadMasAlta && combustible == "s")
+    {
+        velocidadMasAlta=velocidad
+    };
 
-////////////
+    //velocidades de combustibles liquidos superiores a 100//
 
-if (velocidad>100&&combustible=="l")    {contadorLiquido++};
+    if (velocidad>100 && combustible=="l")    
+    {
+        contadorLiquido++;
+    }
 
-////////////
+//velocidad mas baja//
 
 if (combustible=="s"&&velocidad<=velocidadMasBaja) 
         { 

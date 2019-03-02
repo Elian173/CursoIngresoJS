@@ -23,7 +23,7 @@ laHora=parseInt(laHora)
         case 18:
         case 19: alert ("es de tarde")
         break;
-
+        
         case 20:
         case 21:
         case 22:
@@ -41,9 +41,7 @@ laHora=parseInt(laHora)
         break;
        
     }
-
     if(laHora>19&&laHora<=24){alert("A dormir ")};
-
     }
 
 
