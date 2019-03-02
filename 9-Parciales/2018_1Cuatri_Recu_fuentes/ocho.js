@@ -82,6 +82,9 @@ sumaDeTerritorios+=territorio;
 
 };
 
+alert("Hay "+contadorImpar+" paises con superficie impar.\n Hay "+contadorMenosCien+" paises con superficie menor a 100km."+
+"\nHay "+contadorCien+" paises con una superficie igual a 100km.\n Hay "+contadorMasCien+" paises con una supeficie mayo a 100"+
+"\n El promedio de las superficies de los paises es " + sumaDeTerritorios/contador + " . \n El pais con menor superficie es "+paisMasChico);
 
 };
 
