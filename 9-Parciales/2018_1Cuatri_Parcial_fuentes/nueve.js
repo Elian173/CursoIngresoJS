@@ -12,11 +12,11 @@ function mostrar() {
     d) El promedio del peso de todos los productos.	
     f) El peso máximo y el mínimo.*/
 
-    var contadorPar=0
-    var contador=0
+    var contadorPar = 0
+    var contador = 0
     var marcaDelMasPesado
-    var contadorMenosDe0Grados=0
-    var sumaPesos=0
+    var contadorMenosDe0Grados = 0
+    var sumaPesos = 0
     var pesoMax
     var pesoMin
     var promedio;
@@ -82,14 +82,14 @@ function mostrar() {
         respuesta = confirm("ingresar otro producto?");
     };
 
-    promedio= sumaPesos/contador ;
+    promedio = sumaPesos / contador;
 
-document.write("la cantidad de temperaturas pares es " + contadorPar + "<br>");
-document.write("la marca del producto mas pesado es " + marcaDelMasPesado + "<br>");
-document.write("la cantidad de productos que se conservan a menos de 0 grados es " + contadorMenosDe0Grados + "<br>");
-document.write("el promedio del peso de todos los productos es " + promedio + "<br>");
-document.write("el peso maximo fue " + pesoMax + "<br>");
-document.write("el peso minimo fue " + pesoMin + "<br>");
+    document.write("la cantidad de temperaturas pares es " + contadorPar + "<br>");
+    document.write("la marca del producto mas pesado es " + marcaDelMasPesado + "<br>");
+    document.write("la cantidad de productos que se conservan a menos de 0 grados es " + contadorMenosDe0Grados + "<br>");
+    document.write("el promedio del peso de todos los productos es " + promedio + "<br>");
+    document.write("el peso maximo fue " + pesoMax + "<br>");
+    document.write("el peso minimo fue " + pesoMin + "<br>");
 
 
 
