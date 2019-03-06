@@ -1,24 +1,23 @@
-function mostrar()
-{
+function mostrar() {
 
 
     var dia
 
-    dia= prompt("que dia de la semana es");
-    
+    dia = prompt("que dia de la semana es");
+
     parseInt(dia);
 
-    switch (dia){
+    switch (dia) {
         case "lunes":
         case "martes":
         case "miercoles":
         case "jueves":
         case "viernes": alert("a trabajar");
-        break
+            break
         case "sabado":
-        case "domingo": alert ( "buen finde" )
-        break;
-        default : alert ( "invalido ");
-        break;
+        case "domingo": alert("buen finde")
+            break;
+        default: alert("invalido ");
+            break;
     }
 }

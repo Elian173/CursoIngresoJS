@@ -8,8 +8,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
+function CalcularPrecio() {
 
      var cantidadA
 
@@ -24,54 +23,54 @@ function CalcularPrecio ()
      var impuesto
 
 
-     marca=document.getElementById("Marca").value;
-     cantidad=parseInt(cantidadA);
-     precioBr=(cantidad)*35;
-     descuento=0
+     marca = document.getElementById("Marca").value;
+     cantidad = parseInt(cantidadA);
+     precioBr = (cantidad) * 35;
+     descuento = 0
 
 
-     if (cantidad<6)      {descuento=+0};
+     if (cantidad < 6) { descuento = +0 };
 
-     if (cantidad>=6)     {descuento=+50};
+     if (cantidad >= 6) { descuento = +50 };
 
-     if(cantidad==5){
-                      if      (marca=="ArgentinaLuz")     {descuento=+40} 
-                      else    {descuento=+30} 
-                    };    
+     if (cantidad == 5) {
+          if (marca == "ArgentinaLuz") { descuento = +40 }
+          else { descuento = +30 }
+     };
 
-     if(cantidad==4){
-                     if       (marca=="ArgentinaLuz"||marca=="FelipeLamparas")    {descuento=+25}
-                     else     {descuento=+20}    
-                    };
+     if (cantidad == 4) {
+          if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") { descuento = +25 }
+          else { descuento = +20 }
+     };
 
-     if(cantidad==3){
-                     if  (marca=="ArgentinaLuz")       {descuento=+15}
-                          else{
-                                if       (marca=="FelipeLamparas")     {descuento=+10} 
-                                    else     {descuento=+5}      
-                              }   
-                    } ;
-     
+     if (cantidad == 3) {
+          if (marca == "ArgentinaLuz") { descuento = +15 }
+          else {
+               if (marca == "FelipeLamparas") { descuento = +10 }
+               else { descuento = +5 }
+          }
+     };
 
 
-     impuesto= (precioBr*10)/100;
 
-     aDescontar= (precioBr*descuento)/100;
+     impuesto = (precioBr * 10) / 100;
 
-     precioFinal=(precioBr)-(aDescontar);
-     
-     
-     if (precioFinal>=120) {
-                              document.getElementById("precioDescuento").value=precioFinal+impuesto
-                           }
-     
-     if (precioFinal>=120) {
+     aDescontar = (precioBr * descuento) / 100;
 
-     alert("IIBB Usted pago $"+(precioFinal+impuesto)+", siendo $"+(impuesto)+" el impuesto que se pagó")
-                         
-                           }
+     precioFinal = (precioBr) - (aDescontar);
 
-     else {document.getElementById("precioDescuento").value="$"+precioFinal};
+
+     if (precioFinal >= 120) {
+          document.getElementById("precioDescuento").value = precioFinal + impuesto
+     }
+
+     if (precioFinal >= 120) {
+
+          alert("IIBB Usted pago $" + (precioFinal + impuesto) + ", siendo $" + (impuesto) + " el impuesto que se pagó")
+
+     }
+
+     else { document.getElementById("precioDescuento").value = "$" + precioFinal };
 
 
 }
